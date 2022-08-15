@@ -24,6 +24,23 @@ namespace carpinteria.forms
         private void Form1_Load(object sender, EventArgs e)
         {
             proximoId();
+            cargarProductos();
+        }
+
+        private void cargarProductos()
+        {
+            DataTable tabla = new DataTable();
+            conexion.Open();
+            SqlCommand comando = new SqlCommand("SP_CONSULTAR_PRODUCTOS", conexion);
+            comando.CommandType = CommandType.StoredProcedure;
+
+            tabla.Load(comando.ExecuteReader());
+
+            conexion.Close();
+
+            cbo_Producto.DataSource = tabla;
+            cbo_Producto.DisplayMember = "n_producto";
+            cbo_Producto.ValueMember = "id_producto";
         }
 
         private void proximoId()
