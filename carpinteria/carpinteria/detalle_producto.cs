@@ -8,12 +8,17 @@ namespace carpinteria
 {
     internal class detalle_producto
     {
-        public producto producto { get; set; }
-        public int cantidad { get; set; }
-
-        private int CalcularSubTotal()
+        public producto Producto { get; set; }
+        public int Cantidad { get; set; }
+        public detalle_producto(producto producto, int cantidad)
         {
-            return cantidad * producto.precio;
+            Producto = producto;
+            Cantidad = cantidad;
+        }
+
+        public double CalcularSubTotal()
+        {
+            return Producto.Precio * Cantidad;
         }
 
     }
