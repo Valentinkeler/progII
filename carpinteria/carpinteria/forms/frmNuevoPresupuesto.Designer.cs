@@ -64,7 +64,6 @@
             this.lbl_PresupuestoNro.Size = new System.Drawing.Size(89, 13);
             this.lbl_PresupuestoNro.TabIndex = 1;
             this.lbl_PresupuestoNro.Text = "Presupuesto Nro:";
-            //this.lbl_PresupuestoNro.Click += new System.EventHandler(this.lbl_PresupuestoNro_Click);
             // 
             // dtp_fecha
             // 
@@ -140,6 +139,7 @@
             this.btn_agregar.TabIndex = 14;
             this.btn_agregar.Text = "agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // button1
             // 

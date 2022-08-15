@@ -24,10 +24,10 @@ namespace carpinteria.forms
         private void Form1_Load(object sender, EventArgs e)
         {
             proximoId();
-            cargarProductos();
+            cargarCombo();
         }
 
-        private void cargarProductos()
+        private void cargarCombo()
         {
             DataTable tabla = new DataTable();
             conexion.Open();
@@ -60,6 +60,11 @@ namespace carpinteria.forms
             conexion.Close();
 
             lbl_PresupuestoNro.Text += nextID;  
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
