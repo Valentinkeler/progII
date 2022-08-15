@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31229.75
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "carpinteria", "carpinteria.csproj", "{BB251D1D-3F33-4956-88EC-ACF7DF42D8E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "carpinteria", "carpinteria\carpinteria.csproj", "{BCC7907D-6F49-415B-AEFE-62DAF824A757}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB251D1D-3F33-4956-88EC-ACF7DF42D8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB251D1D-3F33-4956-88EC-ACF7DF42D8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB251D1D-3F33-4956-88EC-ACF7DF42D8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB251D1D-3F33-4956-88EC-ACF7DF42D8E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC7907D-6F49-415B-AEFE-62DAF824A757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC7907D-6F49-415B-AEFE-62DAF824A757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC7907D-6F49-415B-AEFE-62DAF824A757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC7907D-6F49-415B-AEFE-62DAF824A757}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FCE082FE-2370-4612-B2AC-DD5B76CF2211}
+		SolutionGuid = {BB89D4A0-1974-4C67-BD32-F0F793510CFC}
 	EndGlobalSection
 EndGlobal
