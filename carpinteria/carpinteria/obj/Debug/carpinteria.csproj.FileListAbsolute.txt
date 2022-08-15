@@ -1,0 +1,12 @@
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\bin\Debug\carpinteria.exe.config
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\bin\Debug\carpinteria.exe
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\bin\Debug\carpinteria.pdb
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.csproj.AssemblyReference.cache
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.csproj.SuggestedBindingRedirects.cache
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.Properties.Resources.resources
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.csproj.GenerateResource.cache
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.csproj.CoreCompileInputs.cache
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.exe
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.pdb
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.forms.frm_principal.resources
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.forms.frm_presupuesto.resources

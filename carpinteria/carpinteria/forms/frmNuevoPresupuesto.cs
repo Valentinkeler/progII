@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace carpinteria
+namespace carpinteria.forms
 {
-    public partial class Form1 : Form
+    public partial class frm_presupuesto : Form
     {
-        public Form1()
+        public frm_presupuesto()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_PresupuestoNro_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
