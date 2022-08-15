@@ -64,7 +64,7 @@
             this.lbl_PresupuestoNro.Size = new System.Drawing.Size(89, 13);
             this.lbl_PresupuestoNro.TabIndex = 1;
             this.lbl_PresupuestoNro.Text = "Presupuesto Nro:";
-            this.lbl_PresupuestoNro.Click += new System.EventHandler(this.lbl_PresupuestoNro_Click);
+            //this.lbl_PresupuestoNro.Click += new System.EventHandler(this.lbl_PresupuestoNro_Click);
             // 
             // dtp_fecha
             // 
