@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using carpinteria.DBhelper;
 
 namespace carpinteria.forms
 {
     public partial class frm_presupuesto : Form
     {
-        SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-EU00IF5;Initial Catalog=carpinteria_db;Integrated Security=True");
+        accesoDatos oAccesoDatos = new accesoDatos();
         
             
         public frm_presupuesto()
@@ -23,44 +25,39 @@ namespace carpinteria.forms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            proximoId();
-            cargarCombo();
+            ////proximoId();
+            cargarCombo("SP_CONSULTAR_PRODUCTOS", cbo_Producto);
         }
 
-        private void cargarCombo()
+        private void cargarCombo(string SP,ComboBox combo)
         {
-            DataTable tabla = new DataTable();
-            conexion.Open();
-            SqlCommand comando = new SqlCommand("SP_CONSULTAR_PRODUCTOS", conexion);
-            comando.CommandType = CommandType.StoredProcedure;
+            DataTable table = oAccesoDatos.consultarBD(SP);
 
-            tabla.Load(comando.ExecuteReader());
+            combo.DataSource = table;
+            combo.ValueMember = table.Columns[0].ColumnName;
+            combo.DisplayMember = table.Columns[1].ColumnName;
 
-            conexion.Close();
-
-            cbo_Producto.DataSource = tabla;
-            cbo_Producto.DisplayMember = "n_producto";
-            cbo_Producto.ValueMember = "id_producto";
         }
 
-        private void proximoId()
-        {
-            conexion.Open();
-            SqlCommand comando = new SqlCommand("SP_PROXIMO_ID",conexion);
-            comando.CommandType = CommandType.StoredProcedure;
-            
-            SqlParameter param = new SqlParameter("@next",SqlDbType.Int);
-            param.Direction = ParameterDirection.Output;
-            comando.Parameters.Add(param);
+        //private void proximoId()
+        //{
+        //    conexion.Open();
+        //    SqlCommand comando = new SqlCommand("SP_PROXIMO_ID",conexion);
+        //    comando.CommandType = CommandType.StoredProcedure;
 
-            comando.ExecuteNonQuery();
+        //    //SqlParameter param = new SqlParameter("@next",SqlDbType.Int);
+        //    //param.Direction = ParameterDirection.Output;
 
-            int nextID =Convert.ToInt32(param.Value);
+        //    int nextID = comando.Parameters.Add(new SqlParameter("@next", SqlDbType.Int).Direction = ParameterDirection.Output);
 
-            conexion.Close();
+        //    comando.ExecuteNonQuery();
 
-            lbl_PresupuestoNro.Text += nextID;  
-        }
+        //    //int nextID =Convert.ToInt32(param);
+
+        //    conexion.Close();
+
+        //    lbl_PresupuestoNro.Text += nextID;  
+        //}
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {

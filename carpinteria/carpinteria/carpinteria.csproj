@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBhelper\accesoDatos.cs" />
     <Compile Include="entidades\detalle_producto.cs" />
     <Compile Include="forms\frmNuevoPresupuesto.cs">
       <SubType>Form</SubType>
