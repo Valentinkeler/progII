@@ -10,3 +10,4 @@ C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\c
 C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.pdb
 C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.forms.frm_principal.resources
 C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.forms.frm_presupuesto.resources
+C:\Users\valentin\Desktop\repo_progII\progII\carpinteria\carpinteria\obj\Debug\carpinteria.forms.frmNuevoProducto.resources

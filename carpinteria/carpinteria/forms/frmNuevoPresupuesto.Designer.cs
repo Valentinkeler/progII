@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDetalles = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lbl_PresupuestoNro = new System.Windows.Forms.Label();
             this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
             this.txt_cliente = new System.Windows.Forms.TextBox();
@@ -45,16 +50,53 @@
             this.txt_subTotal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDetalles
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(49, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(518, 204);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.colProducto,
+            this.colPrecio,
+            this.colCantidad,
+            this.colAcciones});
+            this.dgvDetalles.Location = new System.Drawing.Point(40, 241);
+            this.dgvDetalles.Name = "dgvDetalles";
+            this.dgvDetalles.Size = new System.Drawing.Size(527, 204);
+            this.dgvDetalles.TabIndex = 0;
+            this.dgvDetalles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // colProducto
+            // 
+            this.colProducto.HeaderText = "Producto";
+            this.colProducto.Name = "colProducto";
+            this.colProducto.Width = 150;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.Width = 130;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.Width = 130;
+            // 
+            // colAcciones
+            // 
+            this.colAcciones.HeaderText = "Acciones";
+            this.colAcciones.Name = "colAcciones";
+            this.colAcciones.Width = 75;
             // 
             // lbl_PresupuestoNro
             // 
@@ -149,6 +191,7 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -212,11 +255,11 @@
             this.Controls.Add(this.txt_cliente);
             this.Controls.Add(this.dtp_fecha);
             this.Controls.Add(this.lbl_PresupuestoNro);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDetalles);
             this.Name = "frm_presupuesto";
             this.Text = "nuevo presupuesto";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +267,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDetalles;
         private System.Windows.Forms.Label lbl_PresupuestoNro;
         private System.Windows.Forms.DateTimePicker dtp_fecha;
         private System.Windows.Forms.TextBox txt_cliente;
@@ -241,6 +284,11 @@
         private System.Windows.Forms.TextBox txt_subTotal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
+        private System.Windows.Forms.DataGridViewButtonColumn colAcciones;
     }
 }
 

@@ -27,5 +27,17 @@ namespace carpinteria.forms
             frm_presupuesto nuevo = new frm_presupuesto();
             nuevo.Show();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarPresupuesto nuevo = new frmConsultarPresupuesto();
+            nuevo.Show();
+        }
+
+        private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmNuevoProducto nuevo = new frmNuevoProducto();
+            nuevo.Show();
+        }
     }
 }

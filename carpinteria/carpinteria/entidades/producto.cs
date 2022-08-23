@@ -8,21 +8,29 @@ namespace carpinteria
 {
     internal class producto
     {
-        public int ProductoNro { get; set; }
+        private string nom;
+
+        public int Prod { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }
-        public bool Activo { get; set; }
-        public producto(int productoNro, string nombre, double precio)
+        public string Activo { get; set; }
+        public producto(string nombre, double precio,string activo)
         {
-            ProductoNro = productoNro;
             Nombre = nombre;
             Precio = precio;
-            Activo = true;
+            Activo = activo;
+        }
+
+        public producto(int prod, string nom, int precio)
+        {
+            Prod = prod;
+            this.nom = nom;
+            Precio = precio;
         }
 
         private string toString()
         { 
-            return ProductoNro+" | "+Nombre+" | $"+Precio+" | "+Activo;
+            return Nombre+" | $"+Precio+" | "+Activo;
         } 
 
     }

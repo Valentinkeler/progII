@@ -1,8 +1,11 @@
-﻿using System;
+﻿using carpinteria.DBhelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace carpinteria
 {
@@ -21,15 +24,15 @@ namespace carpinteria
             Detalle = new List<detalle_producto>();
         }
 
-        private void agregarDetalle(detalle_producto detalle)
+        public void agregarDetalle(detalle_producto detalle)
         {
             Detalle.Add(detalle);
         }
-        private void quitarDetalle(int indice)
+        public void quitarDetalle(int indice)
         {
             Detalle.RemoveAt(indice);
         }
-        private double calcularTotal()
+        public double calcularTotal()
         {
             double total = 0;
             foreach (detalle_producto items in Detalle)
@@ -38,9 +41,61 @@ namespace carpinteria
             }
             return total;
         }
-        private void Confirmar()
+        public bool Confirmar()
         {
+            bool resultado=true;
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion.ConnectionString= @"Data Source=DESKTOP-EU00IF5;Initial Catalog=carpinteria_db;Integrated Security=True";
+                conexion.Open();
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = "SP_INSERTAR_MAESTRO";
 
+                comando.Parameters.AddWithValue("@cliente", this.cliente);
+                comando.Parameters.AddWithValue("@dto", this.descuento);
+                comando.Parameters.AddWithValue("@total", this.calcularTotal()-this.descuento);
+
+                SqlParameter param = new SqlParameter("@presupuesto_nro", SqlDbType.Int);
+                param.Direction = ParameterDirection.Output;
+                comando.Parameters.Add(param);
+
+                comando.ExecuteNonQuery();
+
+                int presupuestoNro = Convert.ToInt32(param.Value);
+                int CDetalle = 1;
+                foreach (detalle_producto item in Detalle)
+                {
+
+                    SqlCommand cmdDet = new SqlCommand();                    
+                    cmdDet.Connection = conexion;
+                    cmdDet.CommandType = CommandType.StoredProcedure;
+                    cmdDet.CommandText = "SP_INSERTAR_DETALLE";
+
+                    cmdDet.Parameters.AddWithValue("@presupuesto_nro", presupuestoNro);
+                    cmdDet.Parameters.AddWithValue("@detalle", CDetalle);
+                    cmdDet.Parameters.AddWithValue("@id_producto", item.Producto.Prod);
+                    cmdDet.Parameters.AddWithValue("@cantidad", item.Cantidad);
+
+                    cmdDet.ExecuteNonQuery();
+                    CDetalle++;
+                }
+                
+            }
+            catch (Exception)
+            {
+                resultado = false;
+            }
+            finally
+            {
+                if (conexion !=null && conexion.State==ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+            return resultado;
         }
     }
 }

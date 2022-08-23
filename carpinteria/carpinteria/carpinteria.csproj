@@ -48,11 +48,23 @@
   <ItemGroup>
     <Compile Include="DBhelper\accesoDatos.cs" />
     <Compile Include="entidades\detalle_producto.cs" />
+    <Compile Include="forms\frmConsultarPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmConsultarPresupuesto.Designer.cs">
+      <DependentUpon>frmConsultarPresupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmNuevoPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\frmNuevoPresupuesto.Designer.cs">
       <DependentUpon>frmNuevoPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmNuevoProducto.Designer.cs">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -64,6 +76,9 @@
     <Compile Include="entidades\producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\frmNuevoProducto.resx">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
