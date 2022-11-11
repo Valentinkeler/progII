@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\datosAPI\datosAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="formularios\FrmAltaPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\FrmConsultarPresupuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\FrmDetallesPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\FrmModificarPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formularios\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

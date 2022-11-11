@@ -1,0 +1,12 @@
+C:\Users\valentin\Desktop\progII\datosAPI\bin\Debug\net6.0\datosAPI.deps.json
+C:\Users\valentin\Desktop\progII\datosAPI\bin\Debug\net6.0\datosAPI.dll
+C:\Users\valentin\Desktop\progII\datosAPI\bin\Debug\net6.0\datosAPI.pdb
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\datosAPI.csproj.AssemblyReference.cache
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\datosAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\datosAPI.AssemblyInfoInputs.cache
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\datosAPI.AssemblyInfo.cs
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\datosAPI.csproj.CoreCompileInputs.cache
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\datosAPI.dll
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\refint\datosAPI.dll
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\datosAPI.pdb
+C:\Users\valentin\Desktop\progII\datosAPI\obj\Debug\net6.0\ref\datosAPI.dll
